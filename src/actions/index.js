@@ -1,7 +1,7 @@
 import axios from 'axios';
 import fetchJsonp from 'fetch-jsonp';
 import Private from '../../private';
-const API_KEY  =  Private.C_API_KEY;
+const API_KEY  =  Private.C_KEY;
 
 
 export const ROOT_URL = "https://api.tumblr.com/v2/";
