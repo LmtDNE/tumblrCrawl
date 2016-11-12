@@ -1,6 +1,5 @@
 import axios from 'axios';
-import Private from '../../private'
-const API_KEY  = Private.C_API_KEY;
+const API_KEY  = process.env.API_KEY;
 
 
 export const ROOT_URL = "https://api.tumblr.com/v2/";
