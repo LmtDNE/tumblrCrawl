@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_KEY  = process.env.API_KEY;
+const API_KEY  = process.ENV.API_KEY;
 
 
 export const ROOT_URL = "https://api.tumblr.com/v2/";
@@ -10,7 +10,7 @@ const config = {
   headers: {
     "Access-Control-Allow-Origin" : "*",
     "Access-Control-Allow-Headers" : "Origin, X-Requested-With, Content-Type, Accept"
-}
+  }
 };
 
 export function addToFavorites(post) {
