@@ -1,6 +1,5 @@
 import React from "react";
 import Parser from "html-react-parser";
-//sickmainstreamdream
 
 export default (props) => {
 

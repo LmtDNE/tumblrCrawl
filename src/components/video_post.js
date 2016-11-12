@@ -1,7 +1,6 @@
 import React from "react";
 import Parser from "html-react-parser";
 
-// sickmainstreamdream
 function renderVideo(url) {
  return( <video width="320" height="240" controls src="url" type="video/mp4" ></video>)
 };

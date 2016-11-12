@@ -3,9 +3,9 @@ import React from "react";
 function renderImage(image) {
   return (<img  key={image.original_size.url} src={image.original_size.url} />)
 }
-//sickmainstreamdream
+
 export default (props) => {
-  // console.log("This is photo props", props);
+
   return (
       <div>
         <div>{props.photos.map(renderImage)}</div>
