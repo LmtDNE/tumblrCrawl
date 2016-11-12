@@ -1,18 +1,12 @@
 import axios from 'axios';
 import fetchJsonp from 'fetch-jsonp';
-
+const API_KEY  = Private.C_API_KEY;
 
 
 export const ROOT_URL = "https://api.tumblr.com/v2/";
 export const FETCH_POSTS = 'FETCH_POSTS';
 export const ADD_FAVORITE = 'ADD_FAVORITE';
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE';
-
-let API_KEY;
-
-fetchJsonp.get('/api').then(res => {
-  API_KEY = res.json();
-})
 
 
 export function addToFavorites(post) {
