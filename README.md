@@ -5,5 +5,5 @@ tumblCrawl let's you keep up with your favorite Tumblr Blogs and save your favor
 ##Getting Started##
 ```
   > npm install
-  > npm start
+  > npm develop
 ```
