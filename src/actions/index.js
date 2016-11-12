@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_KEY  = process.ENV.API_KEY;
+const API_KEY  = process.env.API__KEY;
 
 
 export const ROOT_URL = "https://api.tumblr.com/v2/";
