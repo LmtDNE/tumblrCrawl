@@ -1,4 +1,5 @@
 import axios from 'axios';
+import fetchJsonp from 'fetch-jsonp';
 const API_KEY  = process.env.API__KEY;
 
 
@@ -31,16 +32,13 @@ export function fetchPosts(blog, tag) {
   if(blog && !tag){
     url = `${ROOT_URL}blog/${blog}/posts?api_key=${API_KEY}&limit=${resultLimit}`;
     return dispatch => {
-      return axios.get(url, {
-      headers: 
-        {
-        'Access-Control-Allow-Origin' : '*',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Accept': 'text/json'
-      }
-    }).then(
+      return fetchJsonp(url).then(function(response) {
+        console.log("This is response", response);
+        return response.json()
+      }).then(
         request => {
-          const blogPosts = request.data.response.posts
+          console.log("This is request", request);
+          const blogPosts = request.response.posts
           dispatch({
           type: FETCH_POSTS,
           payload: blogPosts
@@ -55,16 +53,11 @@ export function fetchPosts(blog, tag) {
     url = `${ROOT_URL}tagged?api_key=${API_KEY}&tag=${tag}&limit=${resultLimit}`;
     console.log("This is url", url);
     return dispatch => {
-      return axios.get(url, {
-      headers: 
-        {
-        'Access-Control-Allow-Origin' : '*',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Accept': 'text/json'
-      }
-    }).then(
+      return fetchJsonp(url).then(function(response) {
+        return response.json()
+      }).then(
         request => {
-          const blogPosts = request.data.response
+          const blogPosts = request.response
           dispatch({
           type: FETCH_POSTS,
           payload: blogPosts
@@ -78,16 +71,11 @@ export function fetchPosts(blog, tag) {
   if(blog && tag){
     url = `${ROOT_URL}blog/${blog}/posts?api_key=${API_KEY}&tag=${tag}&limit=${resultLimit}`;
     return dispatch => {
-      return axios.get(url, {
-      headers: 
-        {
-        'Access-Control-Allow-Origin' : '*',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Accept': 'text/json'
-      }
-    }).then(
+      return fetchJsonp(url).then(function(response) {
+        return response.json()
+      }).then(
         request => {
-          const blogPosts = request.data.response.posts
+          const blogPosts = request.response.posts
           dispatch({
           type: FETCH_POSTS,
           payload: blogPosts
