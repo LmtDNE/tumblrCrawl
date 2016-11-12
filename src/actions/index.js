@@ -6,7 +6,7 @@ export const ROOT_URL = "https://api.tumblr.com/v2/";
 export const FETCH_POSTS = 'FETCH_POSTS';
 export const ADD_FAVORITE = 'ADD_FAVORITE';
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE';
-axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+
 
 export function addToFavorites(post) {
   console.log("This is post inside addToFavorite", post);
