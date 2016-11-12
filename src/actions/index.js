@@ -34,6 +34,7 @@ export function fetchPosts(blog, tag) {
       return axios.get(url, {
       headers: 
         {
+        'Access-Control-Allow-Origin' : '*',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'text/json'
       }
@@ -57,6 +58,7 @@ export function fetchPosts(blog, tag) {
       return axios.get(url, {
       headers: 
         {
+        'Access-Control-Allow-Origin' : '*',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'text/json'
       }
@@ -79,6 +81,7 @@ export function fetchPosts(blog, tag) {
       return axios.get(url, {
       headers: 
         {
+        'Access-Control-Allow-Origin' : '*',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'text/json'
       }
