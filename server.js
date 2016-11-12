@@ -1,7 +1,7 @@
 'use strict'
 const express = require('express');
 const path = require('path');
-const key = process.env.API__KEY;
+
 
 
 const app = express();
@@ -15,9 +15,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/api', (req, res) => {
-  res.json(key);
-});
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));
