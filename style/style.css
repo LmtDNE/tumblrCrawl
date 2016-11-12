@@ -3,7 +3,6 @@ body {
 }
 li {
   list-style-type: none;
-  margin-bottom: 30px;
 }
 form input{
   margin-left: 50px;
@@ -29,7 +28,6 @@ div.post-container {
   display: inline-block;
   float: left;
   width: 70%;
-  border-right: 1px solid white;
   padding-top: 10px;
 }
 div.favorite-container {
